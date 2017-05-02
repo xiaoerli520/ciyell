@@ -21,7 +21,7 @@
                     <h5 class="lh35 clear main_h5"><a class="lf main_a fb" href="javascript:void(0)"><?php echo $item['catname'];?></a></h5>
                     <?php foreach ($article_list as $art_item):?>
                         <?php if($art_item['id']==$item['id']){?>
-                            <h6 class="fn"><a class="clear" href="<?php echo base_url()."index.php?c=Article&m=Showdetail&articleid=".$art_item['aid'];?>" title="<?php echo $art_item['title'];?>"><span class="main_ul_span lf"><?php echo $art_item['title'];?></span><span class="rt padl20 disin"><?php echo(substr($art_item['created_at'],5,6));?></span></a></h6>
+                            <h6 class="fn"><a class="clear" href="<?php echo base_url()."index.php?c=Article&m=Showdetail&articleid=".$art_item['aid'];?>" title="<?php echo $art_item['title'];?>"><span class="main_ul_span lf"><?php echo $art_item['title'];?></span><span class="rt padl20 disin"><?php echo(substr($art_item['updated_at'],5,6));?></span></a></h6>
                         <?php }?>
                     <?php endforeach;?>
                 </ul>

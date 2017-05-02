@@ -10,6 +10,7 @@ class ArticleMod extends CI_Model{
             return false;
         }else{
             $rst = $rst -> result_array();
+            //var_dump($rst);
             return $rst;
         }
     }

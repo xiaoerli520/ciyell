@@ -21,12 +21,12 @@
             <div id="top_nav" style="width: 412px; height: 206px;">
                 <ul style="width: 618px;"><!---头部内容-->
                     <?php foreach ($catlist_p as $item):?>
-                        <li class="nav-li per"><a class="top_nav" href="content.html" target="_self" style="width: 103px;"><span class="span1"><?php echo $item['catname'];?></span></a>
+                        <li class="nav-li per"><a class="top_nav" href="<?php echo base_url()."index.php?c=Article&m=CateArticleList&cateid=".$item['id']."&catelev=".$item['catlevel'];?>" target="_self" style="width: 103px;"><span class="span1"><?php echo $item['catname'];?></span></a>
                             <dl class="nav-child span2">
                                 <div class="lf span1">
                                     <?php foreach ($catlist_s as $s_item):?>
                                         <?php if($s_item['catpid']==$item['id']){?>
-                                            <dd><a href="content.html" target="_self"><?php echo $s_item['catname'];?></a></dd>
+                                            <dd><a href="<?php echo base_url()."index.php?c=Article&m=CateArticleList&cateid=".$s_item['id']."&catelev=".$s_item['catlevel'];?>" target="_self"><?php echo $s_item['catname'];?></a></dd>
                                         <?php }?>
                                     <?php endforeach;?>
                                 </div> <div class="lf span1">    </div> </dl>
